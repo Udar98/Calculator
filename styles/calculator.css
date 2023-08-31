@@ -1,0 +1,79 @@
+body{
+  color: white;;
+  font-family: Arial;
+  background-color: black;
+  text-align: center;
+}
+.calculation{
+  color: white;
+  font-size: 40px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.number-button{
+  color: white;
+  font-size: 26px;
+  border: none;
+  background-color: rgb(59, 59, 59);
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.operator-button{
+  color: white;
+  font-size: 26px;
+  border: none;
+  background-color: orange;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.clear-button{
+  color: white;
+  font-size: 17px;
+  border: none;
+  background-color: rgb(59, 59, 59);
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.text{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.input{
+  color:rgb(0, 0, 0);
+  font-size: 17px;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: antiquewhite;
+}
+
+.calculate-button{
+  color: white;
+  font-size: 17px;
+  border: none;
+  background-color: orange;
+  width: 90px;
+  height: 60px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 5px;
+
+}
+
+.result{
+  font-size: 25px;
+}

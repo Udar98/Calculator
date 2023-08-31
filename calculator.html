@@ -2,88 +2,11 @@
 <html>
   <head>
     <title>Calculator</title>
-    <style>
-      body{
-        color: white;;
-        font-family: Arial;
-        background-color: black;
-        text-align: center;
-      }
-      .calculation{
-        color: white;
-        font-size: 40px;
-        margin-top: 15px;
-        margin-bottom: 5px;
-      }
+    <link 
+    rel = "stylesheet"
+    href = "styles/calculator.css"
+    >
 
-      .number-button{
-        color: white;
-        font-size: 26px;
-        border: none;
-        background-color: rgb(59, 59, 59);
-        width: 60px;
-        height: 60px;
-        border-radius: 30px;
-        margin-right: 5px;
-        cursor: pointer;
-      }
-
-      .operator-button{
-        color: white;
-        font-size: 26px;
-        border: none;
-        background-color: orange;
-        width: 60px;
-        height: 60px;
-        border-radius: 30px;
-        cursor: pointer;
-        margin-right: 5px;
-      }
-
-      .clear-button{
-        color: white;
-        font-size: 17px;
-        border: none;
-        background-color: rgb(59, 59, 59);
-        width: 60px;
-        height: 60px;
-        border-radius: 60px;
-        cursor: pointer;
-        margin: 5px;
-      }
-
-      .text{
-        font-size: 25px;
-        font-weight: bold;
-      }
-
-      .input{
-        color:rgb(0, 0, 0);
-        font-size: 17px;
-        margin: 10px;
-        padding: 20px;
-        border-radius: 30px;
-        background-color: antiquewhite;
-      }
-
-      .calculate-button{
-        color: white;
-        font-size: 17px;
-        border: none;
-        background-color: orange;
-        width: 90px;
-        height: 60px;
-        border-radius: 30px;
-        cursor: pointer;
-        margin: 5px;
-
-      }
-
-      .result{
-        font-size: 25px;
-      }
-      
-    </style>
   </head>
   <body>
     <p class = "js-calculation calculation"></p>
@@ -201,66 +124,6 @@
 
     <p class = "js-F result"></p>
   
-    <script>
-
-      let calculation = localStorage.getItem('calculation' || '');
-
-      displayCalculation();
-
-      function updateCalculation(value){
-        calculation += value;
-        displayCalculation();
-      }
-
-      function saveCalculation(){
-        localStorage.setItem('calculation', calculation);
-      }
-
-
-      function displayCalculation(){
-        document.querySelector('.js-calculation')
-        .innerHTML = calculation;
-      }
-
-      function converToFahrenheit(celsius){
-     return(celsius* 9 / 5) +32;
-     }
-
-     function convertToCelsius(fahrenheit){
-      return(fahrenheit - 32) * 5 / 9;
-     }
-
-     function convertTemperatureToF(){
-      const inputElement = document.querySelector('.js-C-input');
-      let conversion = Number(inputElement.value);
-      document.querySelector('.js-C')
-      .innerHTML = `${converToFahrenheit(conversion)} F`
-     }
-
-     function convertTemperatureToC(){
-      const inputElement = document.querySelector('.js-F-input');
-      let conversion = Number(inputElement.value);
-      document.querySelector('.js-F')
-      .innerHTML = `${convertToCelsius(conversion)} C`
-     }
-
-    
-        function handleConversionKeydownF(event){
-          if(event.key === 'Enter'){
-          convertTemperatureToC();
-        }
-      }
-     
-        function handleConversionKeydownC(event){
-          if(event.key === 'Enter'){
-          convertTemperatureToF();
-        }
-      }
-
-    
-
-     
-     
-    </script> 
+    <script src = "scripts/calculator.js"></script> 
   </body>   
 </html>
